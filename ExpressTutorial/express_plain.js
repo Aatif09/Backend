@@ -1,4 +1,5 @@
 import express from 'express';
+// const express = require('express')
 
 const app = express();
 const port = 3000;
@@ -11,6 +12,9 @@ app.post('/', (req, res) => {
 });
 app.post('/post', (req, res) => {
   res.json([{ name: "Aatif Jamshed" }, { id: "2719" }]);
+});
+app.post('/a', (req, res) => {
+  res.send({ name: "Aatif Jamshed", id: "2719" });
 });
 
 app.listen(port, () => {

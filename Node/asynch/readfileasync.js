@@ -1,16 +1,9 @@
-const fs = require('fs').promises;
-let arr = new Array();
-async function jsonreadFile() {
-  const data1 = await fs.readFile("../data.json");
-  return JSON.parse(data1);
-}
-jsonreadFile().then((data) => {
-  console.log("Recieved Data:" + JSON.stringify(data[0]))
-  arr.push(JSON.stringify(data[0]))
-}).catch((err) => {
-  console.log("Error while promose handling:" + err);
-});
+console.log("Started listening")
+const readfile = async () => {
+  const fspro = require("fs/promises");
 
-setTimeout(() => {
-  console.log("heuuuuu:" + arr);
-}, 2000);
+  const data = await fspro.readFile("./data.txt", "utf8");
+  console.log(data);
+}
+readfile();
+console.log("Stopped listening")

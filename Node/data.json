@@ -3,5 +3,10 @@
     "name": "John Doe",
     "roll": "123",
     "pic1": "https://example.com/image1.jpg"
+  },
+  {
+    "name": "Aj",
+    "roll": "2123",
+    "pic1": "https://example.com/image1.jpg"
   }
 ]
